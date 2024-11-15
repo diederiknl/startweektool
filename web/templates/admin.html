@@ -1,0 +1,29 @@
+<!-- web/templates/admin.html -->
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Admin - Startweek Tool</title>
+    <link href="/static/css/main.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1>Admin Panel - Startweek Tool</h1>
+    <div class="upload-container">
+        <h2>CSV Upload</h2>
+        <p>Upload een CSV bestand met de volgende kolommen: studentnummer, voornaam, achternaam, lokaal, coach</p>
+        <form enctype="multipart/form-data" id="uploadForm">
+            <input accept=".csv" id="csvFile" required type="file">
+            <button type="submit">Upload</button>
+        </form>
+        <div id="uploadStatus"></div>
+    </div>
+    <div class="preview-container">
+        <h2>Huidige Data</h2>
+        <div id="dataPreview"></div>
+    </div>
+</div>
+<script src="/static/js/admin.js"></script>
+</body>
+</html>
