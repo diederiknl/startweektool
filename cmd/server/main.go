@@ -46,6 +46,6 @@ func main() {
 	r.GET("/api/search", adminHandler.SearchStudents)
 
 	// Start server
-	log.Println("Server starting on http://localhost:8080")
-	r.Run(":8080")
+	log.Println("Server starting on http://*:8080")
+	r.Run("0.0.0.0:8080")
 }
