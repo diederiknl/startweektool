@@ -1,0 +1,16 @@
+#!/bin/sh
+
+. /etc/rc.subr
+
+name="starttool"
+start_cmd="${name}_start"
+stop_cmd=":"
+
+starttool_start()
+{
+cd /app/startweektool 
+/usr/local/bin/go run cmd/server/main.go
+}
+
+load_rc_config $name
+run_rc_command "$1"
